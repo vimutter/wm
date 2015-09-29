@@ -1,0 +1,26 @@
+<div class='stats'>
+  <div class='total'>
+  Total:
+    <%= reviews[:total] %>
+  </div>
+  <div class='count'>
+  Selected:
+    <%= reviews[:count] %>
+  </div>
+</div>
+
+<% reviews[:reviews].each do |review|%>
+  <div class='review'>
+    <div class='title'>
+      <%= review[:title] %>
+    </div>
+    <div>
+      <%= review[:reviewer] %>
+    </div>
+    <br/>
+
+    <div>
+      <%= raw review[:reviewText] %>
+    </div>
+  </div>
+<% end %>

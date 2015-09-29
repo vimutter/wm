@@ -1,0 +1,21 @@
+<%= form_tag reviews_path(format: :js), method: :get, id: :search_reviews, remote: true do %>
+    <div style='width: 130px;'>
+      <%= label_tag :id, 'Id of a product' %>
+    </div>
+    <%= text_field_tag :id %>
+
+    <br/>
+    <br/>
+    <div style='width: 130px;'>
+      <%= label_tag :keywords, 'Keywords' %>
+    </div>
+
+    <%= text_field_tag :keywords %>
+    <br/>
+    <br/>
+
+    <%= submit_tag 'Search' %>
+<% end %>
+
+<div id="reviews">
+</div>

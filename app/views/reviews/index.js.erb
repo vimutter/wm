@@ -1,0 +1,8 @@
+<% if @reviews.present? %>
+  $('#reviews').html("<%= j render 'reviews', reviews: @reviews %>");
+<% else %>
+  $('#reviews').html("Nothing found");
+<% end %>
+
+$('#search_reviews input').removeClass('disabled');
+$('#reviews').removeClass('disabled');
